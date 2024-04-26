@@ -1,0 +1,603 @@
+/* Google Font Import - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito, sans-serif;
+}
+
+/* СКРОЛЛ САЙТА */
+/* СКРОЛЛ САЙТА */
+/* СКРОЛЛ САЙТА */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--upload-btn-hover-color);
+  border-radius: 10px;
+}
+
+
+:root {
+  /* ===== Colors ===== */
+  --body-color: #e4e9f7;
+  --sidebar-color: #67a9ff;
+  --primary-color: #ffffff;
+  --primary-color-light: #67a9ff;
+  --toggle-color: #ffffff;
+  --text-color: #ffffff;
+  --white-section-color: #ffffff;
+  --music-player-color: #67a9ff;
+  --upload-btn-color: #67a9ff;
+  --header-text-color: black;
+  --upload-btn-hover-color: #5c97ea;
+  --search-color: #67a9ff;
+  --track-hover-color: #ececec;
+  --track-list-text-color: black;
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+body.dark {
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #242526;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+  --white-section-color: #242526;
+  --music-player-color: #242526;
+  --upload-btn-color: #18191a;
+  --header-text-color: #ccc;
+  --upload-btn-hover-color: #3a3b3c;
+  --search-color: #ccc;
+  --track-hover-color: #3f3f3f;
+  --track-list-text-color: white;
+}
+
+
+/* ===== Sidebar ===== */
+/* ===== Sidebar ===== */
+/* ===== Sidebar ===== */
+
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  height: calc(99% - 10px); 
+  width: 250px;
+  padding: 10px 14px;
+  background: var(--sidebar-color);
+  transition: var(--tran-05);
+  z-index: 100;
+  border-radius: 20px;
+}
+
+.sidebar.close {
+  width: 88px;
+}
+
+.sidebar li {
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon {
+  min-width: 60px;
+  border-radius: 6px;
+}
+
+.sidebar .icon {
+  min-width: 60px;
+  border-radius: 6px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon {
+  color: var(--text-color);
+  transition: var(--tran-03);
+}
+
+.sidebar .text {
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 1;
+}
+.sidebar.close .text {
+  opacity: 0;
+}
+
+.sidebar header {
+  position: relative;
+}
+
+.sidebar header .image-text {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar header .logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+header .image-text .name {
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+header .image-text .profession {
+  font-size: 16px;
+  margin-top: -2px;
+  display: block;
+}
+
+.sidebar header .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar header .image img {
+  width: 40px;
+  border-radius: 6px;
+}
+
+.sidebar header .toggle {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%) rotate(180deg);
+  height: 25px;
+  width: 25px;
+  background-color: var(--primary-color);
+  color: var(--sidebar-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+
+body.dark .sidebar header .toggle {
+  color: var(--text-color);
+}
+
+.sidebar.close .toggle {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu {
+  margin-top: 20px;
+}
+
+.sidebar li a {
+  list-style: none;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: var(--tran-03);
+}
+
+.sidebar li a:hover {
+  background-color: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+  color: var(--sidebar-color);
+}
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+  color: var(--text-color);
+}
+
+.sidebar .menu-bar {
+  height: calc(100% - 55px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+.menu-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .menu-bar .mode {
+  border-radius: 6px;
+  background-color: var(--primary-color-light);
+  position: relative;
+  transition: var(--tran-05);
+}
+
+.menu-bar .mode .sun-moon {
+  height: 50px;
+  width: 60px;
+}
+
+.mode .sun-moon i {
+  position: absolute;
+}
+.mode .sun-moon i.sun {
+  opacity: 0;
+}
+body.dark .mode .sun-moon i.sun {
+  opacity: 1;
+}
+body.dark .mode .sun-moon i.moon {
+  opacity: 0;
+}
+
+.menu-bar .bottom-content .toggle-switch {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.toggle-switch .switch {
+  position: relative;
+  height: 22px;
+  width: 40px;
+  border-radius: 25px;
+  background-color: var(--toggle-color);
+  transition: var(--tran-05);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: var(--sidebar-color);
+  transition: var(--tran-04);
+}
+
+body.dark .switch::before {
+  left: 20px;
+}
+
+.home {
+  position: absolute;
+  top: 0;
+  top: 0;
+  left: 250px;
+  height: 100vh;
+  width: calc(100% - 250px);
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+.home .text {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 12px 60px;
+}
+
+.sidebar.close ~ .home {
+  left: 78px;
+  height: 100vh;
+  width: calc(100% - 78px);
+}
+
+body.dark .home .text {
+  color: var(--text-color);
+}
+
+
+/* ===== БЕЛЫЙ БЛОК С ТРЕКАМИ ===== */
+/* ===== БЕЛЫЙ БЛОК С ТРЕКАМИ ===== */
+/* ===== БЕЛЫЙ БЛОК С ТРЕКАМИ ===== */
+
+
+.white-section {
+  background-color: var(--white-section-color);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: calc(100% - 120px);
+  height: calc(100% - 120px); /* Учитываем отступы сверху и снизу */
+  border-radius: 20px;
+  z-index: 99;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: var(--tran-05);
+  overflow: auto;
+  padding: 30px;
+}
+
+.white-section-header {
+  margin-bottom: 20px; /* Отступ между заголовком и списком треков */
+}
+
+.track-list {
+  position: absolute;
+  top: 200px;
+  left: 30px;
+  width: 97%;
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем внутренний отступ у списка */
+  color: var(--track-list-text-color);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Nunito, sans-serif;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px; /* Скругляем углы границы */
+  margin-bottom: 15px; /* Увеличиваем вертикальный отступ между треками */
+  padding: 18px; /* Добавляем внутренний отступ для контента внутри трека */
+  transition: var(--tran-03);
+  cursor: pointer;
+}
+
+.track:hover {
+  background-color: var(--track-hover-color);
+  transition: var(--tran-03);
+}
+
+.track h3 {
+  margin-bottom: 5px; /* Отступ между названием трека и исполнителем */
+}
+
+.header-text {
+  margin-bottom: 50px;
+}
+
+.header-text p {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--header-text-color);
+  transition: var(--tran-05);
+}
+
+.header-text h2 {
+  font-size: 60px;
+  line-height: 50px;
+  font-weight: 700;
+  color: var(--header-text-color);
+  transition: var(--tran-05);
+}
+
+.search {
+  position: absolute;
+  width: 50%;
+  height: 5%;
+  top: 30px;
+  right: 400px;
+  font-size: 16px; /* Add or adjust the font-size property */
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #dadada;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.search:focus {
+  border: 1px solid var(--search-color);
+  box-shadow: 0 0 5px var(--search-color);
+  transition: 0.3s ease-in-out;
+}
+
+.upload-btn {
+  position: absolute;
+  left: 10.5rem;
+  top: 7.5rem;
+  background-color: var(--upload-btn-color);
+  transition: var(--tran-05);
+  border-radius: 20px;
+  padding: 12px 30px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.upload-btn:hover {
+  background-color: var(--upload-btn-hover-color);
+}
+
+.upload-btn,
+.header-text p,
+.header-text h2 {
+  margin-left: 20px;
+}
+
+.delete-track {
+  cursor: pointer;
+  color: rgb(194, 194, 194); /* Задаем серый цвет */
+  order: 1; /* Задаем порядок, чтобы иконка удаления была справа */
+  transition: 0.3s;
+}
+
+.delete-track:hover {
+  color: rgb(155, 155, 155); /* Задаем цвет при наведении */
+  transition: 0.3s;
+}
+
+
+/* ===== КНОПКИ ПЛЕЕРА ===== */
+/* ===== КНОПКИ ПЛЕЕРА ===== */
+/* ===== КНОПКИ ПЛЕЕРА ===== */
+
+
+.music-player {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: calc(100% - 120px);
+  height: 90px;
+  background-color: var(--music-player-color);
+  transition: var(--tran-05);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 98;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seek-bar {
+  width: 50%;
+  margin-top: -5px;
+  z-index: 9999;
+  border-radius: 100px;
+  transition: 0.5s ease;
+  background: rgb(228, 228, 228);
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  width: calc(50% - 20px); /* Учитываем ширину ползунка и добавляем отступы */
+  font-size: 12px;
+  margin-top: -20px; /* Чтобы поднять блок времени над ползунком */
+}
+
+.time-display span {
+  color: #fff;
+}
+
+.current-time {
+  order: 1; /* Перемещаем текущее время в начало */
+}
+
+.total-time {
+  order: 2; /* Перемещаем общее время в конец */
+}
+
+.current-time,
+.total-time {
+  margin-left: -520px;
+  margin-right: -55px;
+  margin-top: 3px;
+}
+
+.music-player button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: rgb(228, 228, 228);
+  margin: 0 10px;
+  padding: 5px;
+  transition: 0.3s ease;
+}
+
+.music-player button:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.buttons-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.buttons-container button {
+  font-size: 30px;
+  position: relative;
+  top: 0;
+}
+
+.play-pause {
+  width: 40px; /* Установите фиксированную ширину для кнопки воспроизведения/паузы */
+  transition: transform 0.3s ease;
+}
+
+.volume-bar {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  margin-top: 40px;
+}
+
+.volume {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  margin-left: 79%;
+  margin-top: 28px;
+}
+
+.track.hidden {
+  display: none;
+}
+
+.track.visible {
+  display: flex;
+}
+
+
+
+
+
+
+.nav-link {
+  position: relative;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+}
