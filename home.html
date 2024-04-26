@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Плагин Font Awesome: предоставляет иконки и символы для улучшения визуального оформления веб-страниц. -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Плагин Boxicons: предоставляет еще больше векторных иконок и символов для веб-дизайна. -->
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Плагин Typed.js: позволяет создавать анимированный текст, который появляется посимвольно. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script> <!-- Плагины GSAP и ScrollTrigger: предоставляют анимационные возможности для элементов и элементов, которые срабатывают при прокрутке страницы. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>  <!-- Плагины GSAP и ScrollTrigger: предоставляют анимационные возможности для элементов и элементов, которые срабатывают при прокрутке страницы. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> <!--  Плагин Anime.js: предоставляет библиотеку для создания сложных анимаций на веб-сайте -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!--  Плагин Animate.css: содержит готовые анимации, которые могут быть легко применены к элементам веб-страницы. -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"> <!--  Плагин Hover.css: предоставляет анимации при наведении курсора на элементы. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script> <!-- Плагин ScrollMagic и Animation.gsap: предоставляют инструменты для создания анимаций, связанных с прокруткой страницы. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script> <!-- Плагин ScrollMagic и Animation.gsap: предоставляют инструменты для создания анимаций, связанных с прокруткой страницы. -->
+	
+	<title>ALLERGIL.NET - Музыка без интернета и рекламы</title>
+</head>
+
+<body>
+	<!-- ===== МЕНЮ НАВИГАЦИИ ===== -->
+
+    <header class="header">
+		<nav class="mask">
+			<img class="logo-nav" src="images/BLACK_NEW.png" alt="error">
+			<span class="company-name-nav"><a href="#home">ALLERGIL</a></span>
+			<div class="spacer"></div>
+			<form class="search-form">
+				<input id="searchInput" type="text" placeholder="Поиск..." class="search-text" oninput="showResults()">
+				<button type="submit"><i class="fas fa-search search-ico"></i></button>
+			</form>
+			<ul class="list">
+				<li><a href="#teams">Группы</a></li>
+				<li><a href="albums.html">Альбомы</a></li>
+				<li><a href="music.html">Треки</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	
+		<!-- ===== СЕКЦИЯ ГЛАВНОЙ СТРАНИЦЫ ===== -->
+
+		<div class="background-blocks">
+			<div class="home-pink-block"></div>
+			<div class="home-white-block">
+				<div style="width: 20%; margin-left: -10%; top: -10%" class="home-pink-block"></div>
+				<div style="width: 15%; height: 20%; margin-left: -85%; top: 65%" class="home-pink-block"></div>
+				<div style="width: 40%; height: 40%; left: 70%; top: 30%" class="home-blue-block"></div>
+			</div>
+			<div class="home-blue-block" id="blue-block2"></div>
+		</div>
+
+		<section class="centered-text home" id="home">
+			<h1>ALLERGIL</h1>
+			<h2 class="show">
+				<span>Слушайте музыку</span>
+				<span class="typed-text"></span>
+				<span class="typed-text1"></span>
+			</h2>
+		</section>
+
+		<!-- ===== СЕКЦИЯ АЛГОРИТМА СЕРВИСА ===== -->
+
+		<section class="algorithm" id="algorithm">
+			<div class="white-block">
+				<div class="square20"></div>
+				<div class="square21"></div>
+				<div class="rectangle20"></div>
+			</div>
+			<div class="algorithm-content">
+				<h1>Алгоритм нашего
+<span>сервиса</span>
+				</h1>
+			</div>
+		</section>
+
+		<section class="algorithm-section">
+			<div class="container">
+				<div class="algorithm-block hvr-grow">
+					<i class="fa-solid fa-magnifying-glass algorithm-icons"></i>
+					<h3>Поиск музыки</h3>
+					<p>Наши пользователи могут искать музыку с помощью различных фильтров,
+						таких как исполнитель, альбом
+						и группа. Это позволяет находить музыку быстро и просто</p>
+				</div>
+
+				<div class="algorithm-block hvr-grow">
+					<i class="fa-solid fa-headphones algorithm-icons"></i>
+					<h3>Прослушивание музыки</h3>
+					<p>Пользователи могут прослушивать музыку, используя наш встроенный
+						аудиоплеер. Мы предоставляем
+						высококачественное аудио и возможность загружать свою музыку.</p>
+				</div>
+
+				<div class="algorithm-block hvr-grow">
+					<i class="fa-solid fa-wifi algorithm-icons"></i>
+					<h3>Оффлайн доступ</h3>
+					<p>Мы предоставляем возможность загружать музыку для прослушивания в
+						оффлайн-режиме, чтобы
+						пользователи могли наслаждаться музыкой даже без доступа к интернету.</p>
+				</div>
+
+				<div class="algorithm-block hvr-grow">
+					<i class="fa-solid fa-compact-disc algorithm-icons"></i>
+					<h3>Создание плейлистов</h3>
+					<p>Пользователи могут создавать собственные плейлисты, добавлять в них
+						понравившиеся треки и
+						управлять ими.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== СЕКЦИЯ С ЦЕЛЬЮ И ДЕВИЗОМ ===== -->
+
+		<section class="mission-section">
+			<div class="mission-container">
+				<div class="mission-text">
+					<h2>Наша цель</h2>
+					<p>Предоставить возможность прослушивания музыки без интернета и
+						рекламы.</p>
+				</div>
+				<div class="mission-block">
+					<div class="square square5"></div>
+					<div class="square square1"></div>
+					<div class="rectangle rectangle1"></div>
+					<div class="square square2"></div>
+					<div class="square square3"></div>
+					<div class="rectangle rectangle2"></div>
+					<div class="square square4"></div>
+					<div class="rectangle rectangle3"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="motto-section">
+			<div class="motto-container">
+				<div class="motto-block">
+					<div class="figure square10"></div>
+					<div class="figure rectangle10"></div>
+					<div class="figure square11"></div>
+					<div class="figure rectangle11"></div>
+					<div class="figure square12"></div>
+					<div class="figure rectangle12"></div>
+					<div class="figure square13"></div>
+					<div class="figure square14"></div>
+					<div class="figure rectangle13"></div>
+				</div>
+				<div class="motto-text">
+					<h2>Наш девиз</h2>
+					<p>Музыка - это тишина, которая живет между звуками... Найди свою тишину.
+						<span>© В.А.
+							Моцарт.</span>
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== СЕКЦИЯ ОТЗЫВОВ ===== -->
+
+		<section class="reviews">
+			<div class="responsive-container-block bg">
+				<p class="text-blk title">
+					Отзывы о нашем <span style="color:#67a9ff">сервисе</span>
+				</p>
+				<div class="btn">
+					<div class="container-block swiper-button-prevs">
+						<img class="image-block pagination-button" alt="error"
+							src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/t33.png">
+					</div>
+					<div class="container-block swiper-button-nexts">
+						<img class="image-block pagination-button" alt="error"
+							src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/t32.png">
+					</div>
+				</div>
+				<div class="swiper-container mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="responsive-container-block content">
+								<p class="text-blk quotes">
+									“
+								</p>
+								<img class="profile-img" src="images/avatars/avatar2.jpg" alt="error">
+								<p class="text-blk info">
+									Музыкальный сервис просто великолепен! Удобный интерфейс и отличное качество звука
+									делают его лучшим выбором для моей музыкальной коллекции.
+								</p>
+								<img class="image-block review" src="images/t82.jpg" alt="error">
+								<p class="text-blk name">
+									Аня Иванова
+								</p>
+								<p class="text-blk desig">
+									Пользователь
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="responsive-container-block content">
+								<p class="text-blk quotes">
+									“
+								</p>
+								<img class="profile-img image-block" src="images/avatars/8e4f38234003be08e5b867312de42d3e.jpg" alt="error">
+								<p class="text-blk info"> 
+									Прекрасный сервис из-за возможности прослушивания музыки оффлайн. Это спасение для
+									меня, так как часто нахожусь в местах без интернета.
+								</p>
+								<img class="image-block review" src="images/t82.jpg" alt="error">
+								<p class="text-blk name">
+									Алексей Истомин
+								</p>
+								<p class="text-blk desig">
+									Пользователь
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="responsive-container-block content">
+								<p class="text-blk quotes">
+									“
+								</p>
+								<img class="profile-img image-block" src="images/avatars/avatar3.jpg" alt="error">
+								<p class="text-blk info">
+									Пользуюсь этим музыкальным сервисом уже несколько лет, и он продолжает меня
+									удивлять! Удобный интерфейс с возможностью слушать музыку оффлайн.
+								</p>
+								<img class="image-block review" src="images/t82.jpg" alt="error">
+								<p class="text-blk name">
+									Иван Козлов
+								</p>
+								<p class="text-blk desig">
+									Пользователь
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="responsive-container-block content">
+								<p class="text-blk quotes">
+									“
+								</p>
+								<img class="profile-img" src="images/avatars/avatar4.jpg" alt="error">
+								<p class="text-blk info">
+									Сервис отличается надежностью и стабильностью. Не нужно беспокоиться о сбоях или
+									задержках, просто наслаждайтесь музыкой.
+								</p>
+								<img class="image-block review" src="images/t82.jpg" alt="error">
+								<p class="text-blk name">
+									Ольга Соколова
+								</p>
+								<p class="text-blk desig">
+									Пользователь
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== СЕКЦИЯ ГРУПП ===== -->
+
+		<p class="text-blk title bkg">
+			Известные <span style="color:#67a9ff">рок-группы</span>
+		</p>
+		<section class="teams" id="teams">
+			<ul class="teams-ul">
+				<li>
+					<a href="https://ru.wikipedia.org/wiki/Aerosmith">
+						<figure>
+							<img class="teams-img" src='images/teams/aerosmith.jpg' alt="error">
+							<figcaption>
+								<h2>Aerosmith</h2>
+								<p>Легендарная американская рок-группа с ярким стилем и многолетней историей.</p>
+								<div class="group-description">
+									<p>Страна: США</p>
+									<p>Год основания: 1970</p>
+									<p>Стиль: Хард-рок</p>
+								</div>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="https://ru.wikipedia.org/wiki/Linkin_Park">
+						<figure>
+							<img class="teams-img" src='images/teams/linkin_park.jpg' alt="error">
+							<figcaption>
+								<h2>Linkin Park</h2>
+								<p>Известная американская рок-группа с миксом стилей и сильными текстами песен.</p>
+								<div class="group-description">
+									<p>Страна: США</p>
+									<p>Год основания: 1996</p>
+									<p>Стиль: Альтернативный метал, ню-метал</p>
+								</div>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="https://ru.wikipedia.org/wiki/AC/DC">
+						<figure>
+							<img class="teams-img" src='images/teams/acdc.jpg' alt="error">
+							<figcaption>
+								<h2>AC/DC</h2>
+								<p>Легендарная рок-группа с энергичным звучанием и неповторимым стилем.</p>
+								<div class="group-description">
+									<p>Страна: Австралия</p>
+									<p>Год основания: 1976</p>
+									<p>Стиль: Хард-рок, хеви-метал</p>
+								</div>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="https://ru.wikipedia.org/wiki/The_Beatles">
+						<figure>
+							<img class="teams-img" src='images/teams/beatles.jpg' alt="error">
+							<figcaption>
+								<h2>The Beatles</h2>
+								<p>Легендарная британская группа, известная своими мелодичными песнями и влиянием на
+									музыку.</p>
+								<div class="group-description">
+									<p>Страна: Великобритания</p>
+									<p>Год основания: 1960</p>
+									<p>Стиль: Рок, хард-рок</p>
+								</div>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="https://ru.wikipedia.org/wiki/Pink_Floyd">
+						<figure>
+							<img class="teams-img" src='images/teams/pink-floyd.jpg' alt="error">
+							<figcaption>
+								<h2>Pink Floyd</h2>
+								<p>Известная британская группа, создавшая множество эмбиентных и прогрессивных
+									музыкальных произведений.</p>
+								<div class="group-description">
+									<p>Страна: Великобритания</p>
+									<p>Год основания: 1965</p>
+									<p>Стиль: Прогрессивный рок</p>
+								</div>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="https://ru.wikipedia.org/wiki/Scorpions">
+						<figure>
+							<img class="teams-img" src='images/teams/scorpions_.jpg' alt="error">
+							<figcaption>
+								<h2>Scorpions</h2>
+								<p>Немецкая рок-группа, известная своими хитами и энергичными выступлениями.</p>
+								<div class="group-description">
+									<p>Страна: Германия</p>
+									<p>Год основания: 1965</p>
+									<p>Стиль: Хард-рок</p>
+								</div>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+			</ul>
+		</section>
+
+		<!-- ===== СЕКЦИЯ С РАССЫЛКОЙ ===== -->
+
+		<section class="background-sub">
+			<div class="text-sub">
+				<h1>Рассылка
+	<span>новостей</span>
+				</h1>
+			</div>
+	
+			<div class="container-sub">
+				<div class="content-sub">
+					<form class="subscription">
+						<input class="add-email" type="email" id="emailInput" placeholder="allergil@gmail.com" required>
+						<button class="submit-email" type="button" id="submitButton" disabled>
+							<span class="before-submit">Клик</span>
+							<span class="after-submit">Спасибо за подписку на новости!</span>
+						</button>
+					</form>
+				</div>
+				<div class="image-sub">
+					<img src="images/sub.png" alt="error">
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== ПОДВАЛ САЙТА ===== -->
+
+		<footer class="footer">
+			<div class="waves">
+			  <div class="wave" id="wave1"></div>
+			  <div class="wave" id="wave2"></div>
+			  <div class="wave" id="wave3"></div>
+			  <div class="wave" id="wave4"></div>
+			</div>
+			<ul class="social-icon">
+			  <li class="social-icon__item"><a class="social-icon__link" href="https://discord.com/channels/1103744134331764746" target="_blank">
+				  <ion-icon name="logo-discord"></ion-icon>
+				</a></li>
+			  <li class="social-icon__item"><a class="social-icon__link" href="https://vk.com/bakumii" target="_blank">
+				  <ion-icon name="logo-vk"></ion-icon>
+				</a></li>
+			  <li class="social-icon__item"><a class="social-icon__link" href="https://t.me/bakumii" target="_blank">
+				<i class='bx bxl-telegram'></i>
+				</a></li>
+			  <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/bakumi" target="_blank">
+				  <ion-icon name="logo-github"></ion-icon>
+				</a></li>
+			</ul>
+			<ul class="menu">
+			  <li class="menu__item"><a class="menu__link" href="#home">Главная</a></li>
+			  <li class="menu__item"><a class="menu__link" href="#teams">Группы</a></li>
+			  <li class="menu__item"><a class="menu__link" href="albums.html">Альбомы</a></li>
+			  <li class="menu__item"><a class="menu__link" href="music.html">Треки</a></li>
+			</ul>
+			<p>8 (800) 100-10-10</p>
+			<p style="margin: 0 0 0 25px;">&copy; 2024 ALLERGIL | All Rights Reserved</p>
+		  </footer>
+
+
+		  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> <!-- Плагин Swiper: позволяет создавать слайдеры и карусели для отображения контента на веб-странице. -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+		<script src="js/home.js"></script>
+</body>
+
+</html>
