@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ======== CSS ======== -->
+  <link rel="stylesheet" href="css/music.css">
+
+  <!-- ===== Boxicons CSS ===== -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-FkWqFTEcP2+K9IOZuKRkveEZjZ3fO1iqfiztf3gZNT5Kw7R/LvOY/+39ZxmG9Tp1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+	<title>ALLERGIL.NET - Музыка</title>
+</head>
+
+<body>
+  <nav class="sidebar close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="images/WHITE_NEW.png" alt="">
+        </span>
+
+        <div class="text logo-text">
+          <span class="name">ALLERGIL</span>
+          <span class="profession">Слушайте музыку</span>
+        </div>
+      </div>
+
+      <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="nav-link" title="Главная">
+            <a href="home.html">
+              <i class='bx bx-home-alt icon'></i>
+              <span class="text nav-text">Главная</span>
+            </a>
+          </li>
+
+          <li class="nav-link" title="Треки">
+            <a href="music.html">
+              <i class='bx bx-music icon'></i>
+              <span class="text nav-text">Треки</span>
+            </a>
+          </li>
+
+          <li class="nav-link" title="Альбомы">
+            <a href="albums.html">
+              <i class='bx bx-album icon'></i>
+              <span class="text nav-text">Альбомы</span>
+            </a>
+          </li>
+
+          <li class="nav-link" title="Группы">
+            <a href="home.html#teams">
+              <i class='bx bx-group icon'></i>
+              <span class="text nav-text">Группы</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bottom-content">
+        <li class="mode">
+          <div class="sun-moon">
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
+          </div>
+          <span class="mode-text text">Тёмная тема</span>
+
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+
+      </div>
+    </div>
+  </nav>
+
+  <section class="white-section">
+    <header class="white-section-header">
+      <div style="display: flex; align-items: center;">
+        <img src="images/yeat.png" alt="Изображение альбома" width="130" height="130" style="border-radius: 20px; margin-right: 10px;">
+        <div class="header-text">
+          <p style="user-select: none">ПЛЕЙЛИСТ</p>
+          <h2 style="user-select: none">Альбом</h2>
+        </div>
+        <div class="search-wrapper">
+          <input class="search" type="text" placeholder="Поиск...">
+        </div>
+        <!-- Кнопка загрузки треков -->
+        <button onclick="uploadTracks()" class="upload-btn">Загрузить</button>
+      </div>
+    </header>
+    <!-- Список треков -->
+<ul class="track-list" id="trackList"></ul>
+
+  </section>
+  
+  <section>
+    <div class="music-player">
+      <div class="buttons-container">
+        <button class="prev-track"><i class="fas fa-step-backward"></i></button>
+        <button class="play-pause"><i class="fas fa-play"></i></button>
+        <button class="next-track"><i class="fas fa-step-forward"></i></button>
+      </div>
+      <audio id="audio-element"></audio>
+      <input type="range" class="seek-bar" value="0">
+      <div class="time-display">
+        <span class="current-time"></span>
+        <span class="total-time"></span>
+      </div>
+      <i class='bx bxs-volume-full volume'></i>
+      <input type="range" class="volume-bar" value="100">
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+
+  <script src="js/music.js"></script>
+
+</body>
+
+</html>
