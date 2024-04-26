@@ -52,7 +52,7 @@
     align-items: center;
     background: white;
     width: 100%;
-    max-width: 100%; /* Добавлено */
+    max-width: 100%; 
 }
 
 .teams-img {
@@ -62,7 +62,7 @@
     object-fit: cover;
     transition: transform 1000ms;
     border-radius: 5px;
-    max-width: 100%; /* Добавлено */
+    max-width: 100%; 
 }
 
 
@@ -227,13 +227,13 @@ a:is(:hover, :focus) figcaption {
     }
   }
   
-  /* Добавляем иконку поиска */
+
   .search-form button i {
-    margin-right: 5px; /* Расстояние между иконкой и текстом */
+    margin-right: 5px;
   }
   
   .search-form {
-    position: relative; /* Добавляем */
+    position: relative; 
     display: flex;
     align-items: center;
     margin-left: auto;
@@ -241,19 +241,19 @@ a:is(:hover, :focus) figcaption {
   
   .search-form input[type="text"] {
     padding: 8px;
-    border-radius: 20px; /* Добавлено скругление краев только слева */
+    border-radius: 20px; 
     border: 1px solid #ccc;
     width: 600px;
-    outline: none; /* Добавляем */
+    outline: none; 
     margin-left: 200px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
   }
   
   .search-form button {
-    position: absolute; /* Добавляем */
-    right: 0; /* Добавляем */
-    top: 0; /* Добавляем */
+    position: absolute; 
+    right: 0; 
+    top: 0; 
     padding: 10px 20px;
     border: none;
     border-radius: 20px; 
