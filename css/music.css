@@ -344,7 +344,7 @@ body.dark .home .text {
   top: 10px;
   right: 10px;
   width: calc(100% - 120px);
-  height: calc(100% - 120px); /* Учитываем отступы сверху и снизу */
+  height: calc(100% - 120px); 
   border-radius: 20px;
   z-index: 99;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -354,7 +354,7 @@ body.dark .home .text {
 }
 
 .white-section-header {
-  margin-bottom: 20px; /* Отступ между заголовком и списком треков */
+  margin-bottom: 20px; 
 }
 
 .track-list {
@@ -362,8 +362,8 @@ body.dark .home .text {
   top: 200px;
   left: 30px;
   width: 97%;
-  list-style-type: none; /* Убираем маркеры списка */
-  padding: 0; /* Убираем внутренний отступ у списка */
+  list-style-type: none; 
+  padding: 0; 
   color: var(--track-list-text-color);
   font-size: 18px;
   font-weight: 600;
@@ -373,9 +373,9 @@ body.dark .home .text {
 .track {
   display: flex;
   justify-content: space-between;
-  border-radius: 10px; /* Скругляем углы границы */
-  margin-bottom: 15px; /* Увеличиваем вертикальный отступ между треками */
-  padding: 18px; /* Добавляем внутренний отступ для контента внутри трека */
+  border-radius: 10px; 
+  margin-bottom: 15px; 
+  padding: 18px;
   transition: var(--tran-03);
   cursor: pointer;
 }
@@ -386,7 +386,7 @@ body.dark .home .text {
 }
 
 .track h3 {
-  margin-bottom: 5px; /* Отступ между названием трека и исполнителем */
+  margin-bottom: 5px; 
 }
 
 .header-text {
@@ -415,7 +415,7 @@ body.dark .home .text {
   height: 5%;
   top: 30px;
   right: 400px;
-  font-size: 16px; /* Add or adjust the font-size property */
+  font-size: 16px; 
   border: none;
   border-radius: 20px;
   padding: 10px;
@@ -457,13 +457,13 @@ body.dark .home .text {
 
 .delete-track {
   cursor: pointer;
-  color: rgb(194, 194, 194); /* Задаем серый цвет */
-  order: 1; /* Задаем порядок, чтобы иконка удаления была справа */
+  color: rgb(194, 194, 194); 
+  order: 1; 
   transition: 0.3s;
 }
 
 .delete-track:hover {
-  color: rgb(155, 155, 155); /* Задаем цвет при наведении */
+  color: rgb(155, 155, 155);
   transition: 0.3s;
 }
 
@@ -502,9 +502,9 @@ body.dark .home .text {
 .time-display {
   display: flex;
   justify-content: space-between;
-  width: calc(50% - 20px); /* Учитываем ширину ползунка и добавляем отступы */
+  width: calc(50% - 20px); 
   font-size: 12px;
-  margin-top: -20px; /* Чтобы поднять блок времени над ползунком */
+  margin-top: -20px; 
 }
 
 .time-display span {
@@ -512,11 +512,11 @@ body.dark .home .text {
 }
 
 .current-time {
-  order: 1; /* Перемещаем текущее время в начало */
+  order: 1; 
 }
 
 .total-time {
-  order: 2; /* Перемещаем общее время в конец */
+  order: 2; 
 }
 
 .current-time,
@@ -554,7 +554,7 @@ body.dark .home .text {
 }
 
 .play-pause {
-  width: 40px; /* Установите фиксированную ширину для кнопки воспроизведения/паузы */
+  width: 40px; 
   transition: transform 0.3s ease;
 }
 
@@ -580,11 +580,6 @@ body.dark .home .text {
 .track.visible {
   display: flex;
 }
-
-
-
-
-
 
 .nav-link {
   position: relative;
