@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 country.includes(searchTerm);
 
             if (isMatch) {
-                team.style.opacity = 1; // Показать блок
+                team.style.opacity = 1; 
             } else {
-                team.style.opacity = 0; // Скрыть блок
+                team.style.opacity = 0;
             }
         });
     });
